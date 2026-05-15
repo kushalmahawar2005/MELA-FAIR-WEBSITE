@@ -15,9 +15,6 @@ export type Ride = {
   tint: string;
 };
 
-const u = (id: string, w = 1200) =>
-  `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
-
 export const rides: Ride[] = [
   {
     slug: "giant-wheel",
@@ -31,8 +28,8 @@ export const rides: Ride[] = [
     tagline: "Touch the sky, one cabin at a time.",
     description:
       "Our signature 60-foot Ferris wheel — the centerpiece of every Naaz mela. Watch the city sparkle as you rise above the lights and the laughter.",
-    image: u("1551861568-c0afc78d8d96"),
-    tint: "#D62828",
+    image: "/p1.jpg",
+    tint: "#1E3A8A",
   },
   {
     slug: "columbus",
@@ -46,8 +43,8 @@ export const rides: Ride[] = [
     tagline: "Swing till your heart skips a beat.",
     description:
       "A giant pendulum boat that swings higher and higher until you're nearly upside-down. Bring a brave friend.",
-    image: u("1525160354320-d8e92641c563"),
-    tint: "#F4A300",
+    image: "/2.jpg",
+    tint: "#F5B700",
   },
   {
     slug: "break-dance",
@@ -61,8 +58,8 @@ export const rides: Ride[] = [
     tagline: "Disco lights, dizzy laughter.",
     description:
       "Spinning pods inside a spinning platform. The DJ blasts, the lights flash, and the world turns into a blur.",
-    image: u("1530908295418-a12e326966ba"),
-    tint: "#386641",
+    image: "/3.jpg",
+    tint: "#0F1F4D",
   },
   {
     slug: "dragon-train",
@@ -76,8 +73,8 @@ export const rides: Ride[] = [
     tagline: "A roaring ride for little adventurers.",
     description:
       "A roller-coaster styled as a fire-breathing dragon. Loops and drops sized just right for first-timers.",
-    image: u("1513889961551-628c1e5e2ee9"),
-    tint: "#1A1A2E",
+    image: "/4.jpeg",
+    tint: "#1E3A8A",
   },
   {
     slug: "toy-train",
@@ -91,8 +88,8 @@ export const rides: Ride[] = [
     tagline: "Choo-choo through the mela.",
     description:
       "A scenic little train that loops the fairground past every food stall, jhoola and lit-up arch. Pure nostalgia.",
-    image: u("1572450082916-e1d52ab09c10"),
-    tint: "#F4A300",
+    image: "/5.jpg",
+    tint: "#F5B700",
   },
   {
     slug: "merry-go-round",
@@ -106,8 +103,8 @@ export const rides: Ride[] = [
     tagline: "Hand-painted horses, hand-me-down joy.",
     description:
       "Our original 1972 carousel with its painted ponies. Three generations of children have grown up on these horses.",
-    image: u("1561049501-fc0c6f7d35bd"),
-    tint: "#D62828",
+    image: "/6.jpg",
+    tint: "#1E3A8A",
   },
   {
     slug: "pirate-ship",
@@ -121,8 +118,8 @@ export const rides: Ride[] = [
     tagline: "Ahoy! Hold tight.",
     description:
       "A swinging galleon that rocks higher and higher. Sit at the ends if you dare — that's where the air goes wild.",
-    image: u("1525351484163-7529414344d8"),
-    tint: "#386641",
+    image: "/p1.jpg",
+    tint: "#F5B700",
   },
   {
     slug: "bumper-cars",
@@ -136,8 +133,8 @@ export const rides: Ride[] = [
     tagline: "Bump, dodge, repeat.",
     description:
       "Tiny electric cars on a polished floor. The only mela ride where crashing into your cousin is encouraged.",
-    image: u("1581235720704-06d3acfcb36f"),
-    tint: "#1A1A2E",
+    image: "/2.jpg",
+    tint: "#0F1F4D",
   },
 ];
 

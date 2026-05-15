@@ -44,11 +44,11 @@
   --radius-xl: 22px;
   --radius-2xl: 28px;
 
-  --shadow-sm: 0 1px 2px 0 rgb(26 26 46 / 0.05);
-  --shadow-md: 0 2px 10px -2px rgb(26 26 46 / 0.08), 0 1px 3px rgb(26 26 46 / 0.05);
-  --shadow-lg: 0 10px 28px -6px rgb(26 26 46 / 0.14), 0 4px 10px rgb(26 26 46 / 0.06);
-  --shadow-xl: 0 30px 60px -16px rgb(26 26 46 / 0.22);
-  --shadow-poster: 0 18px 40px -12px rgb(214 40 40 / 0.28), 0 6px 14px rgb(244 163 0 / 0.18);
+  --shadow-sm: 0 1px 2px 0 rgb(15 31 77 / 0.05);
+  --shadow-md: 0 2px 10px -2px rgb(15 31 77 / 0.08), 0 1px 3px rgb(15 31 77 / 0.05);
+  --shadow-lg: 0 10px 28px -6px rgb(15 31 77 / 0.14), 0 4px 10px rgb(15 31 77 / 0.06);
+  --shadow-xl: 0 30px 60px -16px rgb(15 31 77 / 0.22);
+  --shadow-poster: 0 18px 40px -12px rgb(30 58 138 / 0.30), 0 6px 14px rgb(245 183 0 / 0.20);
 
   --animate-spin-slow: spin 38s linear infinite;
   --animate-spin-medium: spin 22s linear infinite;
@@ -66,66 +66,66 @@
 }
 
 :root {
-  /* NAAZ neo-mela palette */
-  --cream: #FFF8EC;
-  --marigold: #F4A300;
-  --festival: #D62828;
-  --ink: #1A1A2E;
-  --mehendi: #386641;
-  --paper: #FFF3D9;
+  /* NAAZ palette — Royal Blue + Marigold Yellow + Warm White */
+  --cream: #FFFBF0;       /* warm white — main background */
+  --marigold: #F5B700;    /* golden yellow — accent / CTA */
+  --festival: #1E3A8A;    /* royal blue — secondary */
+  --ink: #0F1F4D;         /* deep royal navy — primary text */
+  --mehendi: #FFD66B;     /* soft butter yellow — tertiary accent */
+  --paper: #FFFFFF;       /* pure white — surface */
 
   --background: var(--cream);
   --foreground: var(--ink);
 
   --primary: var(--marigold);
-  --primary-foreground: #1A1A2E;
+  --primary-foreground: #0F1F4D;
 
   --secondary: var(--festival);
-  --secondary-foreground: #FFF8EC;
+  --secondary-foreground: #FFFBF0;
 
   --accent: var(--mehendi);
-  --accent-foreground: #FFF8EC;
+  --accent-foreground: #0F1F4D;
 
-  --muted: #F5E9CF;
-  --muted-foreground: #5A4A2E;
+  --muted: #EEF2FB;
+  --muted-foreground: #3A4A78;
 
-  --border: rgb(26 26 46 / 0.10);
-  --input: rgb(26 26 46 / 0.14);
-  --ring: rgb(214 40 40 / 0.5);
+  --border: rgb(15 31 77 / 0.10);
+  --input: rgb(15 31 77 / 0.14);
+  --ring: rgb(30 58 138 / 0.5);
 
-  --card: #FFFBF1;
+  --card: #FFFFFF;
   --card-foreground: var(--ink);
-  --popover: #FFFBF1;
+  --popover: #FFFFFF;
   --popover-foreground: var(--ink);
 
   --radius: 0.875rem;
 }
 
 .dark {
-  --background: #100F1C;
-  --foreground: #FFF3D9;
-  --paper: #1A1A2E;
+  --background: #07122E;
+  --foreground: #FFFBF0;
+  --paper: #0F1F4D;
 
-  --primary: #F4A300;
-  --primary-foreground: #1A1A2E;
+  --primary: #F5B700;
+  --primary-foreground: #0F1F4D;
 
-  --secondary: #D62828;
-  --secondary-foreground: #FFF8EC;
+  --secondary: #4361EE;
+  --secondary-foreground: #FFFBF0;
 
-  --accent: #5E8B57;
-  --accent-foreground: #FFF8EC;
+  --accent: #FFD66B;
+  --accent-foreground: #0F1F4D;
 
-  --muted: #1F1E33;
-  --muted-foreground: #C9B98E;
+  --muted: #142046;
+  --muted-foreground: #C7CDE0;
 
-  --border: rgb(255 248 236 / 0.08);
-  --input: rgb(255 248 236 / 0.12);
-  --ring: rgb(244 163 0 / 0.6);
+  --border: rgb(255 251 240 / 0.08);
+  --input: rgb(255 251 240 / 0.12);
+  --ring: rgb(245 183 0 / 0.6);
 
-  --card: #161527;
-  --card-foreground: #FFF3D9;
-  --popover: #161527;
-  --popover-foreground: #FFF3D9;
+  --card: #0F1F4D;
+  --card-foreground: #FFFBF0;
+  --popover: #0F1F4D;
+  --popover-foreground: #FFFBF0;
 }
 
 @layer base {
@@ -138,10 +138,10 @@
   *::-webkit-scrollbar { width: 8px; height: 8px; }
   *::-webkit-scrollbar-track { background: transparent; }
   *::-webkit-scrollbar-thumb {
-    background: rgba(26, 26, 46, 0.2);
+    background: rgba(15, 31, 77, 0.2);
     border-radius: 4px;
   }
-  *::-webkit-scrollbar-thumb:hover { background: rgba(214, 40, 40, 0.55); }
+  *::-webkit-scrollbar-thumb:hover { background: rgba(30, 58, 138, 0.55); }
 
   html {
     background: var(--cream);
@@ -153,8 +153,8 @@
     font-feature-settings: 'ss01', 'liga';
     text-wrap: pretty;
     background-image:
-      radial-gradient(ellipse 80% 50% at 50% -10%, rgb(244 163 0 / 0.18), transparent 60%),
-      radial-gradient(ellipse 60% 40% at 100% 100%, rgb(214 40 40 / 0.10), transparent 70%);
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgb(245 183 0 / 0.18), transparent 60%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgb(30 58 138 / 0.10), transparent 70%);
     background-attachment: fixed;
   }
 

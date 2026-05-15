@@ -17,48 +17,48 @@ type Shot = {
 
 const shots: Shot[] = [
   {
-    src: u("1551861568-c0afc78d8d96", 900),
+    src: u("1517423568366-8b83523034fd", 900),
     alt: "Giant wheel lit up at night",
     span: "tall",
     caption: "Lights on",
     captionHi: "रोशनी",
   },
   {
-    src: u("1581235720704-06d3acfcb36f", 1200),
+    src: u("1533174072545-7a4b6ad7a6c3", 1200),
     alt: "Crowd at an Indian mela",
     span: "wide",
     caption: "The crowd",
     captionHi: "भीड़",
   },
   {
-    src: u("1572450082916-e1d52ab09c10", 900),
+    src: u("1559131397-f94da358f7ca", 900),
     alt: "Carnival arcade at dusk",
     span: "square",
   },
   {
-    src: u("1525160354320-d8e92641c563", 900),
+    src: u("1551817958-d9d86fb29431", 900),
     alt: "Swing ride in motion",
     span: "square",
   },
   {
-    src: u("1530908295418-a12e326966ba", 1200),
+    src: u("1467810563316-b5476525c0f9", 1200),
     alt: "Carnival lights blur",
     span: "wide",
     caption: "After 9pm",
     captionHi: "रात नौ बजे",
   },
   {
-    src: u("1513889961551-628c1e5e2ee9", 900),
+    src: u("1554189097-ffe88e998a2b", 900),
     alt: "Children at a fair",
     span: "tall",
   },
   {
-    src: u("1561049501-fc0c6f7d35bd", 900),
+    src: u("1530541930197-ff16ac917b0e", 900),
     alt: "Carousel detail",
     span: "square",
   },
   {
-    src: u("1525351484163-7529414344d8", 1200),
+    src: u("1543872084-c7bd3822856f", 1200),
     alt: "Mela arch lit up",
     span: "wide",
     caption: "The entrance",
