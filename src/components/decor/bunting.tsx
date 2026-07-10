@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 type Props = {
   className?: string;
@@ -8,7 +11,25 @@ type Props = {
 const flagColors = ["#D62828", "#F4A300", "#386641", "#1A1A2E", "#F4A300", "#D62828"];
 
 export function Bunting({ className, count = 22 }: Props) {
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const flags = Array.from({ length: count });
+
+  if (!mounted) {
+    return (
+      <svg
+        viewBox={`0 0 ${count * 36} 64`}
+        preserveAspectRatio="none"
+        className={cn("h-12 w-full", className)}
+        aria-hidden
+      />
+    );
+  }
+
   return (
     <svg
       viewBox={`0 0 ${count * 36} 64`}

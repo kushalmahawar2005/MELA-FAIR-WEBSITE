@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Naaz Amusement — Jaipur
+
+Marketing + booking website and admin panel for **Naaz Amusement**, an 18-acre themed
+amusement park in Jaipur. Built with Next.js (App Router), MongoDB (Mongoose),
+Tailwind CSS, Zustand, and Cloudinary.
+
+## Features
+
+- **Public site** — Hero, rides, gallery, testimonials, event packages, FAQ, blog,
+  attractions, Khao Gali, ticket info, and contact pages.
+- **Booking** — Event/ride rental enquiry flow that sends details to WhatsApp and
+  stores the enquiry in the database.
+- **Accounts** — Register / login, profile with booking history, change password,
+  and self-service password reset.
+- **Admin panel** (`/admin`) — Dashboard, bookings, rides, customers, and a full
+  homepage Content Manager (edit every section, upload images via Cloudinary).
+
+## Environment Variables
+
+Copy `.env.example` to `.env.local` and fill in:
+
+```bash
+# MongoDB connection (local or Atlas)
+MONGODB_URI=mongodb://127.0.0.1:27017/naaz_amusement
+
+# Signs the admin session cookie — use a long random string in production
+ADMIN_SECRET=change-me-to-a-long-random-string
+
+# Public URL, used for sitemap.xml and robots.txt
+NEXT_PUBLIC_SITE_URL=https://naazamusementjaipur.com
+
+# Cloudinary uploads for admin assets (either CLOUDINARY_URL or the 3 separate values)
+CLOUDINARY_URL=cloudinary://<api-key>:<api-secret>@<cloud-name>
+```
+
+The admin account email is fixed in code (`src/lib/admin.ts`). Logging in with that
+email sets a signed admin cookie that unlocks `/admin` and the protected APIs.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the dev server |
+| `npm run build` | Production build |
+| `npm run start` | Run the production build |
+| `npm run lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+  app/            Routes (pages + API routes under app/api)
+  components/     UI, sections, shared layout, and admin components
+  lib/            Site config, DB connection, auth token, content/ride/blog data
+  models/         Mongoose models (User, Booking, Ride, Content)
+  stores/         Zustand stores (auth, content, rides)
+  proxy.ts        Route protection for /admin and sensitive APIs
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- This repo uses a newer Next.js whose conventions may differ from older versions —
+  check `node_modules/next/dist/docs/` before changing framework-level code.
+- `robots.ts` and `sitemap.ts` live in `src/app` and are generated at build time.

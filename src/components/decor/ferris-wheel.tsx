@@ -1,4 +1,7 @@
+"use client";
+
 import { cn } from "@/lib/utils";
+import { useEffect, useState } from "react";
 
 type Props = {
   className?: string;
@@ -6,7 +9,18 @@ type Props = {
 };
 
 export function FerrisWheel({ className, spokes = 12 }: Props) {
+  const [mounted, setMounted] = useState(false);
+  
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const angle = 360 / spokes;
+
+  if (!mounted) {
+    return <div className={cn("relative aspect-square", className)} aria-hidden />;
+  }
+
   return (
     <div className={cn("relative aspect-square", className)} aria-hidden>
       <svg
